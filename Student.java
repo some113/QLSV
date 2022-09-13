@@ -5,7 +5,7 @@ public class Student {
     private String email;
 
     /**
-     * Constructor 1
+     * Constructor 1.
      */
     Student() {
         this.name = "Student";
@@ -15,10 +15,10 @@ public class Student {
     }
 
     /**
-     * Constructor 2
-     * @param n
-     * @param sid
-     * @param em
+     * Constructor 2.
+     * @param name student's name
+     * @param id student'id
+     * @param email students's email
      */    
     Student(String name, String id, String email) {
         this.name = name;
@@ -28,8 +28,8 @@ public class Student {
     }
 
     /**
-     * Constructor 3
-     * @param s
+     * Constructor 3.
+     * @param s new student
      */
     public Student(Student s) {
         this.name = s.getName();
@@ -38,12 +38,16 @@ public class Student {
         this.email = s.getEmail();
     }
     
+    public void setName(String n) {
+        name = n;
+    }
+
     public String getName() {
         return name;
     }
 
-    public void setName(String n) {
-        name = n;
+    public void setId(String id) {
+        this.id = id; 
     }
 
     public String getId() {
@@ -56,6 +60,10 @@ public class Student {
 
     public String getGroup() {
         return group;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getEmail() {
